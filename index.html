@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Github Test Page</title>
+</head>
+<body>
+<h1>Github Test Page</h1>
+<!--Write a container to hold a javascript clock-->
+<div id="clock"></div>
+
+<script type="text/javascript">
+    //Create a function to display the time
+    function displayTime() {
+    var time = new Date();
+    var hrs = time.getHours();
+    var min = time.getMinutes();
+    var sec = time.getSeconds();
+    var en = 'AM';
+    //Update the clock to 12 hour format
+    if (hrs > 12) {
+        en = 'PM';
+    }
+    if (hrs > 12) {
+        hrs = hrs - 12;
+    }
+    //Add a zero in front of numbers<10
+    if (hrs < 10) {
+        hrs = '0' + hrs;
+    }
+    if (min < 10) {
+        min = '0' + min;
+    }
+    //change text of the clock
+    document.getElementById('clock').innerHTML = hrs + ':' + min + ':' + sec + ' ' + en;
+    }
+</script>
+</body>
+
+</html>
