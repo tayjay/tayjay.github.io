@@ -1,0 +1,40 @@
+<!--A website that imports a stylesheet and script files-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Website</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body><script src="script.js"></script>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="document.getElementById('myModal').style.display = 'none';">&times;</span>
+        <h2>Click on the part to select it</h2>
+      <table>
+        <tr>
+            <td><img src="corridor_v.png" onclick="selectPart('corridor_v.png','C')"></td>
+            <td><img src="junction_up.png" onclick="selectPart('junction_up.png','J')"></td>
+            <td><img src="crossroads.png" onclick="selectPart('crossroads.png','X')"></td>
+            <td><img src="turn_right_up.png" onclick="selectPart('turn_right_up.png','T')"></td>
+            <td><img src="edge_up.png" onclick="selectPart('edge_up.png','E')"></td>
+            <td><img src="airlock_right.png" onclick="selectPart('airlock_right.png','A')"></td>
+            <td><img src="d-block_right.png" onclick="selectPart('d-block_right.png','D')"></td>
+        </tr>
+      </table>
+    </div>
+  
+</div>
+
+<input type="button" value="Select Map 1" onclick="replaceTableWithMap(EZ_maps[0].map,EZ_maps[0].rotationMap);">
+<input type="button" value="Select Map 2" onclick="replaceTableWithMap(EZ_maps[1].map,EZ_maps[1].rotationMap);">
+<input type="button" value="Select Map 3" onclick="replaceTableWithMap(EZ_maps[2].map,EZ_maps[2].rotationMap);">
+<input type="button" value="Select Map 4" onclick="replaceTableWithMap(EZ_maps[3].map,EZ_maps[3].rotationMap);">
+<input type="button" value="Select Map 5" onclick="replaceTableWithMap(EZ_maps[4].map,EZ_maps[4].rotationMap);">
+
+</body>
+</html>
