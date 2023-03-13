@@ -30,11 +30,15 @@
   
 </div>
 
-<input type="button" value="Select Map 1" onclick="replaceTableWithMap(EZ_maps[0].map,EZ_maps[0].rotationMap);">
-<input type="button" value="Select Map 2" onclick="replaceTableWithMap(EZ_maps[1].map,EZ_maps[1].rotationMap);">
-<input type="button" value="Select Map 3" onclick="replaceTableWithMap(EZ_maps[2].map,EZ_maps[2].rotationMap);">
-<input type="button" value="Select Map 4" onclick="replaceTableWithMap(EZ_maps[3].map,EZ_maps[3].rotationMap);">
-<input type="button" value="Select Map 5" onclick="replaceTableWithMap(EZ_maps[4].map,EZ_maps[4].rotationMap);">
+<input type="button" value="Select Map 1" onclick="replaceTableWithMap(0);">
+<input type="button" value="Select Map 2" onclick="replaceTableWithMap(1);">
+<input type="button" value="Select Map 3" onclick="replaceTableWithMap(2);">
+<input type="button" value="Select Map 4" onclick="replaceTableWithMap(3);">
+<input type="button" value="Select Map 5" onclick="replaceTableWithMap(4);">
+<br><br><br><br>
+<input type="button" id="EZ" class="level_button level_selected" value="Entrance Zone" onclick="changeLevel('EZ')">
+<input type="button" id="HCZ" class="level_button" value="Heavy Containment Zone" onclick="changeLevel('HCZ')">
+<input type="button" id="LCZ" class="level_button" value="Light Containment Zone" onclick="changeLevel('LCZ')">
 
 </body>
 </html>

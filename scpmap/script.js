@@ -11,6 +11,7 @@ const D = 6;       //DBLOCK
 //Map
 const map_EZ1 = [
     [O,O,O,O,O,O,O,O],
+    [O,O,O,O,O,O,O,O],
     [A,C,T,O,E,O,E,O],
     [O,O,J,C,J,C,J,O],
     [O,O,C,T,C,C,X,E],
@@ -19,6 +20,7 @@ const map_EZ1 = [
     [O,O,O,E,O,E,O,O]
 ];
 const map_EZ1_rotation= [
+    [0,0,0,0,0,0,0,0]
     [0,0,0,0,0,0,0,0],
     [0,1,2,0,2,0,2,0],
     [0,0,1,1,0,1,3,0],
@@ -29,6 +31,7 @@ const map_EZ1_rotation= [
 ];
 
 const map_EZ2 = [
+    [O,O,O,O,O,O,O],
     [O,O,O,O,E,O,O],
     [A,C,J,C,X,E,O],
     [O,O,C,O,T,T,O],
@@ -38,6 +41,7 @@ const map_EZ2 = [
     [O,O,O,O,O,E,O]
 ];
 const map_EZ2_rotation= [
+    [0,0,0,0,0,0,0],
     [0,0,0,0,2,0,0],
     [0,1,2,1,0,3,0],
     [0,0,0,0,0,2,0],
@@ -47,6 +51,7 @@ const map_EZ2_rotation= [
     [0,0,0,0,0,0,0]
 ]
 const map_EZ3 = [
+    [O,O,O,O,O,O],
     [O,O,E,O,E,O],
     [A,C,X,C,J,O],
     [O,O,J,C,X,E],
@@ -56,6 +61,7 @@ const map_EZ3 = [
     [O,O,E,O,O,O]
 ];
 const map_EZ3_rotation= [
+    [0,0,0,0,0,0],
     [0,0,2,0,2,0],
     [0,1,0,1,3,0],
     [0,0,1,1,0,3],
@@ -65,6 +71,7 @@ const map_EZ3_rotation= [
     [0,0,0,0,0,0]
 ]
 const map_EZ4 = [
+    [O,O,O,O,O,O],
     [O,O,O,E,O,O],
     [A,C,J,X,C,E],
     [O,O,C,C,O,O],
@@ -74,6 +81,7 @@ const map_EZ4 = [
     [O,O,E,O,E,O]
 ];
 const map_EZ4_rotation= [
+    [0,0,0,0,0,0],
     [0,0,0,2,0,0],
     [0,1,2,0,1,3],
     [0,0,0,0,0,0],
@@ -83,6 +91,7 @@ const map_EZ4_rotation= [
     [0,0,0,0,0,0]
 ];
 const map_EZ5 = [
+    [O,O,O,O,O,O,O],
     [O,O,E,O,O,O,O],
     [A,C,X,T,O,E,O],
     [O,O,C,T,J,X,E],
@@ -92,6 +101,7 @@ const map_EZ5 = [
     [O,O,O,E,O,E,O]
 ];
 const map_EZ5_rotation = [
+    [0,0,0,0,0,0,0],
     [0,0,2,0,0,0,0],
     [0,1,0,2,0,2,0],
     [0,0,0,0,2,0,3],
@@ -106,7 +116,227 @@ const EZ_maps = [
     {map:map_EZ2, rotationMap:map_EZ2_rotation, name:"EZ2"},
     {map:map_EZ3, rotationMap:map_EZ3_rotation, name:"EZ3"},
     {map:map_EZ4, rotationMap:map_EZ4_rotation, name:"EZ4"},
-    {map:map_EZ5, rotationMap:map_EZ5_rotation, name:"EZ5"}];
+    {map:map_EZ5, rotationMap:map_EZ5_rotation, name:"EZ5"}
+];
+
+const map_HCZ1 = [
+    [O,O,O,O,E,O,O,O],
+    [O,E,T,T,X,T,O,O],
+    [O,O,J,T,C,T,J,A],
+    [O,O,C,T,J,T,C,O],
+    [O,E,X,T,O,T,J,O],
+    [O,O,C,O,O,O,C,O],
+    [O,O,J,C,J,C,J,A],
+    [O,O,E,O,E,O,O,O]
+];
+const map_HCZ1_rotation = [
+    [0,0,0,0,2,0,0,0],
+    [0,1,2,1,0,2,0,0],
+    [0,0,1,3,0,0,2,2],
+    [0,0,0,1,0,2,0,0],
+    [0,1,0,3,0,0,3,0],
+    [0,0,0,0,0,0,0,0],
+    [0,0,1,1,2,1,0,2],
+    [0,0,0,0,0,0,0,0]
+];
+const map_HCZ2 = [
+    [O,O,O,O,O,O,O,O],
+    [O,O,O,O,E,O,O,O],
+    [O,E,J,C,X,C,J,A],
+    [O,O,C,T,J,O,C,O],
+    [O,E,X,J,X,C,J,O],
+    [O,O,C,O,C,O,C,O],
+    [O,E,J,C,X,C,J,A],
+    [O,O,O,O,E,O,O,O]
+];
+const map_HCZ2_rotation = [
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,0,2,0,0,0],
+    [0,1,2,1,0,1,2,2],
+    [0,0,0,1,3,0,0,0],
+    [0,1,0,0,0,1,3,0],
+    [0,0,0,0,0,0,0,0],
+    [0,1,0,1,0,1,0,2],
+    [0,0,0,0,0,0,0,0]
+];
+const map_HCZ3 = [
+    [O,O,O,O,O,O,O,O],
+    [O,E,O,O,E,O,O,O],
+    [O,J,C,C,X,C,J,A],
+    [O,C,O,O,C,O,C,O],
+    [E,X,C,J,T,O,C,O],
+    [O,T,C,X,C,T,C,O],
+    [O,O,O,E,O,J,J,A],
+    [O,O,O,O,O,E,O,O]
+];
+const map_HCZ3_rotation = [
+    [0,0,0,0,0,0,0,0],
+    [0,2,0,0,2,0,0,0],
+    [0,1,1,1,0,1,2,2],
+    [0,0,0,0,0,0,0,0],
+    [1,0,1,2,3,0,0,0],
+    [0,0,1,0,1,2,0,0],
+    [0,0,0,0,0,1,0,2],
+    [0,0,0,0,0,0,0,0]
+];
+const map_HCZ4 = [
+    [O,O,O,O,E,O,O,O],
+    [O,E,J,C,X,C,T,O],
+    [O,O,C,O,C,T,X,A],
+    [O,O,J,C,X,T,C,O],
+    [O,E,J,O,J,C,J,O],
+    [O,O,J,C,J,T,C,O],
+    [O,O,E,O,O,J,J,A],
+    [O,O,O,O,O,E,O,O]
+];
+const map_HCZ4_rotation = [
+    [0,0,0,0,2,0,0,0],
+    [0,1,2,1,0,1,2,0],
+    [0,0,0,0,0,1,0,2],
+    [0,0,1,1,0,3,0,0],
+    [0,1,3,0,1,1,3,0],
+    [0,0,1,1,0,2,0,0],
+    [0,0,0,0,0,1,0,2],
+    [0,0,0,0,0,0,0,0]
+];
+const map_HCZ5 = [
+    [O,O,O,O,O,O,O,O,O],
+    [O,E,O,O,O,E,O,O,O],
+    [O,J,C,J,C,X,C,J,A],
+    [O,C,O,C,T,J,O,C,O],
+    [E,X,C,J,J,T,T,C,O],
+    [O,T,J,C,X,C,X,J,O],
+    [O,O,E,O,E,O,T,J,A]
+];
+const map_HCZ5_rotation = [
+    [0,0,0,0,0,0,0,0,0],
+    [0,2,0,0,0,2,0,0,0],
+    [0,1,1,2,1,0,1,2,2],
+    [0,0,0,0,1,3,0,0,0],
+    [1,0,1,0,3,0,2,0,0],
+    [0,0,2,1,0,1,0,3,0],
+    [0,0,0,0,0,0,0,0,2]
+];
+
+
+const HCZ_maps = [
+    {map:map_HCZ1, rotationMap:map_HCZ1_rotation, name:"HCZ1"},
+    {map:map_HCZ2, rotationMap:map_HCZ2_rotation, name:"HCZ2"},
+    {map:map_HCZ3, rotationMap:map_HCZ3_rotation, name:"HCZ3"},
+    {map:map_HCZ4, rotationMap:map_HCZ4_rotation, name:"HCZ4"},
+    {map:map_HCZ5, rotationMap:map_HCZ5_rotation, name:"HCZ5"}
+];
+
+const map_LCZ1 = [
+    [O,O,E,O,O,O,O,O],
+    [O,O,J,C,J,E,O,O],
+    [O,O,C,O,C,O,O,O],
+    [O,E,J,J,X,E,O,O],
+    [O,O,O,C,T,C,T,O],
+    [O,O,D,J,J,C,X,E],
+    [O,O,O,O,C,O,C,O],
+    [O,O,O,E,X,C,J,E],
+    [O,O,O,O,E,O,O,O]
+];
+const map_LCZ1_rotation = [
+    [0,0,2,0,0,0,0,0],
+    [0,0,1,1,2,3,0,0],
+    [0,0,0,0,0,0,0,0],
+    [0,1,0,2,0,3,0,0],
+    [0,0,0,0,0,1,2,0],
+    [0,0,0,0,2,1,0,3],
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,1,0,1,0,3],
+    [0,0,0,0,0,0,0,0]
+];
+const map_LCZ2 = [
+    [O,O,O,O,O,O,O,O],
+    [O,O,O,E,O,E,O,O],
+    [O,O,T,J,C,J,J,E],
+    [O,E,J,T,O,T,T,O],
+    [O,O,D,X,J,X,E,O],
+    [O,E,J,T,C,T,T,O],
+    [O,O,J,C,J,C,J,O],
+    [O,O,E,O,O,O,E,O]
+];
+const map_LCZ2_rotation = [
+    [0,0,0,0,0,0,0,0],
+    [0,0,0,2,0,2,0,0],
+    [0,0,1,0,1,0,2,3],
+    [0,1,0,2,0,1,3,0],
+    [0,0,0,0,2,0,3,0],
+    [0,1,2,3,0,0,2,0],
+    [0,0,1,1,0,1,3,0],
+    [0,0,0,0,0,0,0,0]
+];
+const map_LCZ3 = [
+    [O,O,E,O,E,O,O],
+    [O,E,X,C,X,J,E],
+    [O,O,T,J,T,C,O],
+    [O,O,D,X,C,X,E],
+    [O,E,J,J,T,C,O],
+    [O,O,C,O,J,T,O],
+    [O,O,J,C,J,E,O],
+    [O,O,E,O,O,O,O]
+];
+const map_LCZ3_rotation = [
+    [0,0,2,0,2,0,0],
+    [0,1,0,1,0,2,3],
+    [0,0,0,2,3,0,0],
+    [0,0,0,0,1,0,3],
+    [0,1,2,0,2,0,0],
+    [0,0,0,0,1,3,0],
+    [0,0,1,1,0,3,0],
+    [0,0,0,0,0,0,0]
+];
+const map_LCZ4 = [
+    [O,O,O,O,O,O,O,O],
+    [O,E,O,E,O,E,O,O],
+    [E,X,C,X,C,J,T,O],
+    [O,C,O,T,T,O,J,E],
+    [D,J,T,T,J,T,C,O],
+    [O,E,J,J,O,C,J,E],
+    [O,O,O,T,C,X,T,O],
+    [O,O,O,O,O,E,O,O]
+];
+const map_LCZ4_rotation = [
+    [0,0,0,0,0,0,0,0],
+    [0,2,0,2,0,2,0,0],
+    [1,0,1,0,1,0,2,0],
+    [0,0,0,0,2,0,1,3],
+    [0,0,2,1,0,2,0,0],
+    [0,1,0,3,0,0,1,3],
+    [0,0,0,0,1,0,3,0],
+    [0,0,0,0,0,0,0,0]
+];
+const map_LCZ5 = [
+    [O,O,O,O,E,O,E,O],
+    [O,E,J,C,J,C,J,O],
+    [O,O,C,O,O,D,X,E],
+    [O,O,C,O,O,T,J,O],
+    [O,E,X,C,J,T,C,O],
+    [O,O,T,T,C,T,J,E],
+    [O,O,E,J,X,T,O,O],
+    [O,O,O,O,E,O,O,O]
+];
+const map_LCZ5_rotation = [
+    [0,0,0,0,2,0,2,0],
+    [0,1,2,1,0,1,3,0],
+    [0,0,0,0,0,0,0,3],
+    [0,0,0,0,0,1,3,0],
+    [0,1,0,1,2,3,0,0],
+    [0,0,0,2,0,1,0,3],
+    [0,0,1,0,0,3,0,0],
+    [0,0,0,0,0,0,0,0]
+];
+
+const LCZ_maps = [
+    {map:map_LCZ1, rotationMap:map_LCZ1_rotation, name:"LCZ1"},
+    {map:map_LCZ2, rotationMap:map_LCZ2_rotation, name:"LCZ2"},
+    {map:map_LCZ3, rotationMap:map_LCZ3_rotation, name:"LCZ3"},
+    {map:map_LCZ4, rotationMap:map_LCZ4_rotation, name:"LCZ4"},
+    {map:map_LCZ5, rotationMap:map_LCZ5_rotation, name:"LCZ5"}
+];
 
 
 var user_input = []//[{part:C, x:0, y:0},{part:C,x:1,y:0},{part:J,x:2,y:0},{part:C,x:2,y:1},{part:A,x:2,y:2}]
@@ -116,7 +346,7 @@ function addToInput(part,cell_x,cell_y){
     console.log("Part: " + part + " X: " + cell_x + " Y: " + cell_y)
     user_input.push({part:part, x:cell_x-5, y:cell_y-4});
     console.log(user_input);
-    checkEZ(user_input);
+    checkSelectedLevel(user_input);
 }
 
 function partTextToEnum(part){
@@ -138,14 +368,28 @@ function partTextToEnum(part){
     }
 }
 
+var currentLevel  = "EZ"
 
-function checkEZ(input){
-    console.log("Checking EZ");
+function checkSelectedLevel(input){
+    console.log(`Checking ${currentLevel} maps`);
+    var Current_Maps = null;
+    switch(currentLevel){
+        case "EZ":
+            Current_Maps = EZ_maps;
+            break;
+        case "HCZ":
+            Current_Maps = HCZ_maps;
+            break;
+        case "LCZ":
+            Current_Maps = LCZ_maps;
+            break;
+    }
+    if(!Current_Maps){return}
     var allPositions = [];
-    for(var i = 0; i < EZ_maps.length; i++){
-        var plausiblePostions = checkMap(EZ_maps[i], input);//This is the origin point of the search, player will be at the last position in the array
+    for(var i = 0; i < Current_Maps.length; i++){
+        var plausiblePostions = checkMap(Current_Maps[i], input);//This is the origin point of the search, player will be at the last position in the array
         if(plausiblePostions.length > 0){
-            console.log("Map: " + EZ_maps[i].name);
+            console.log("Map: " + Current_Maps[i].name);
             //console.log(plausiblePostions);
             allPositions.push(plausiblePostions);
         }
@@ -157,8 +401,8 @@ function checkEZ(input){
     } else if (allPositions.length == 1){
         if(allPositions[0].length == 1){
             console.log("Found the map " + allPositions[0][0].map);
-            var mapObj = EZ_maps.find(x => x.name == allPositions[0][0].map);
-            replaceTableWithMap(mapObj.map,mapObj.rotationMap);
+            var mapObj = Current_Maps.find(x => x.name == allPositions[0][0].map);
+            replaceTableWithMap(parseInt(mapObj.name.slice(-1))-1);
             //Todo: Change clicked cell to player position
             var alignedInput = rotateInputTimes(user_input,allPositions[0][0].rotation);
             var table = document.getElementById("grid");
@@ -174,6 +418,11 @@ function checkEZ(input){
             }
         }
     }
+}
+
+
+function checkEZ(input){
+    
 }
 
 
@@ -329,16 +578,16 @@ window.onclick = function(event) {
 }
 
 
-setTimeout(function(){
-    document.getElementById("cell_41").className='clicked';
-    lastClicked = document.getElementById("cell_41");
-    document.getElementById("myModal").style.display = "block"; 
-}, 10);
+// setTimeout(function(){
+//     document.getElementById("cell_41").className='clicked';
+//     lastClicked = document.getElementById("cell_41");
+//     document.getElementById("myModal").style.display = "block"; 
+// }, 10);
 
 
 
 // Place map parts on table
-function replaceTableWithMap(map,rotationMap){
+function replaceTableWithMap(mapID){//map,rotationMap){
     var table = document.getElementsByClassName("grid")[0];
     var i = 0;
     for (var r=0;r<9;++r){
@@ -346,6 +595,23 @@ function replaceTableWithMap(map,rotationMap){
             var cell = table.rows[r].cells[c];
             cell.innerHTML = '';
         }
+    }
+    var map = null;
+    var rotationMap = null;
+    //alert("Found map: " + mapID + "")
+    switch(currentLevel){
+        case "EZ":
+            map = EZ_maps[mapID].map;
+            rotationMap = EZ_maps[mapID].rotationMap;
+            break;
+        case "HCZ":
+            map = HCZ_maps[mapID].map;
+            rotationMap = HCZ_maps[mapID].rotationMap;
+            break;
+        case "LCZ":
+            map = LCZ_maps[mapID].map;
+            rotationMap = LCZ_maps[mapID].rotationMap;
+            break;
     }
 
     for (var r=0;r<map.length;++r){
@@ -382,4 +648,13 @@ function partToImage(part){
     }
 }
 
-//replaceTableWithMap(EZ_maps[0].map,EZ_maps[0].rotationMap);
+function changeLevel(name) {
+    this.currentLevel = name;
+    //alert("Level changed to " + this.currentLevel);
+    //Loop through all elements with class containing "level_button" and remove the class "level_selected"
+    var elements = document.getElementsByClassName("level_button");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("level_selected");
+    }
+    document.getElementById(name).classList.add("level_selected");
+}

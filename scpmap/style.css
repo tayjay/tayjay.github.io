@@ -29,6 +29,10 @@
     max-height: 100%;
 }
 
+.level_selected {
+    background-color: yellow;
+}
+
 #box {
     display: none;
     position: absolute;
