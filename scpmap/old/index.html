@@ -1,31 +1,14 @@
+<!--A website that imports a stylesheet and script files-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SCP:SL Mapper</title>
-  <link rel="stylesheet" href="styles-new.css">
-</head>
-<body>
-  <div class="container">
-    <div id="div_lcz" class="horizontal-even">
-        <p>LCZ</p>
-        <img src="CC1.png" alt="CC1" class="image" data-zone="LCZ">
-    </div>
-    <div id="div_hcz" class="horizontal-even">
-        <p>HCZ</p>
-        <img src="CC2.png" alt="CC2" class="image" data-zone="HCZ">
-    </div>
-    <div id="div_ez" class="horizontal-even">
-        <p>EZ</p>
-        <img src="LogoWhite.png" alt="LogoWhite" class="image" data-zone="EZ">
-    </div>
-  </div>
-  <script src="map-data.js"></script>
-  <script src="script-new.js"></script>
-  <script src="mapTransitionHandler.js"></script>
+<title>My Website</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-  <!-- The Modal -->
+</head>
+<body><script src="script.js"></script>
+
+<!-- The Modal -->
 <div id="myModal" class="modal">
 
     <!-- Modal content -->
@@ -46,5 +29,16 @@
     </div>
   
 </div>
+
+<input type="button" value="Select Map 1" onclick="replaceTableWithMap(0);">
+<input type="button" value="Select Map 2" onclick="replaceTableWithMap(1);">
+<input type="button" value="Select Map 3" onclick="replaceTableWithMap(2);">
+<input type="button" value="Select Map 4" onclick="replaceTableWithMap(3);">
+<input type="button" value="Select Map 5" onclick="replaceTableWithMap(4);">
+<br><br><br><br>
+<input type="button" id="EZ" class="level_button level_selected" value="Entrance Zone" onclick="changeLevel('EZ')">
+<input type="button" id="HCZ" class="level_button" value="Heavy Containment Zone" onclick="changeLevel('HCZ')">
+<input type="button" id="LCZ" class="level_button" value="Light Containment Zone" onclick="changeLevel('LCZ')">
+
 </body>
 </html>
