@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        select, button {
+            margin-top: 20px;
+            padding: 10px;
+        }
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SCP-914 Simulator</h1>
+
+    <select id="input">
+        <!-- Options will be populated by Javascript -->
+    </select>
+
+    <select id="operation">
+        <option value="Rough">Rough</option>
+        <option value="Coarse">Coarse</option>
+        <option value="1:1">1:1</option>
+        <option value="Fine">Fine</option>
+        <option value="Very Fine">Very Fine</option>
+    </select>
+
+    <button id="submit">Submit</button>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
