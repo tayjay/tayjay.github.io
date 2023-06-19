@@ -9,12 +9,48 @@
             margin-top: 20px;
             padding: 10px;
         }
-        #output {
+        .output {
             margin-top: 30px;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .path-element {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        [data-op="Rough"] {
+            border: 1px solid #ccc;
+            background-color: red;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        [data-op="Coarse"] {
+            border: 1px solid #ccc;
+            background-color: orange;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        [data-op="1:1"] {
+            border: 1px solid #ccc;
+            background-color: yellow;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        [data-op="Fine"] {
+            border: 1px solid #ccc;
+            background-color: greenyellow;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        [data-op="Very Fine"] {
+            border: 1px solid #ccc;
+            background-color: green;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        
     </style>
 </head>
 <body>
@@ -34,7 +70,24 @@
 
     <button id="submit">Submit</button>
 
-    <div id="output"></div>
+    <div id="output" class="output"></div>
+
+    <br>
+    <h1>Find Path</h1>
+
+    <select id="input-path1">
+        <!-- Options will be populated by Javascript -->
+    </select>
+
+    <select id="input-path2">
+        <!-- Options will be populated by Javascript -->
+    </select>
+
+    <button id="find-path">Find route</button>
+
+    <div id="output-path" class="output"></div>
+
+
 
     <script src="script.js"></script>
 </body>

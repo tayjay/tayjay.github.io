@@ -3,11 +3,15 @@ let data = JSON.parse('{"Janitor Keycard": [{"operation": "Rough", "outputs": [{
 
 // Populate the "input" dropdown
 let inputDropdown = document.getElementById('input');
+let inputPathDropdown = document.getElementById('input-path1');
+let inputPathDropdown2 = document.getElementById('input-path2');
 for (let input in data) {
     let option = document.createElement('option');
     option.value = input;
     option.text = input;
     inputDropdown.add(option);
+    inputPathDropdown.add(option.cloneNode(true));
+    inputPathDropdown2.add(option.cloneNode(true));
 }
 
 // Add event listener to the "Submit" button
@@ -22,3 +26,77 @@ document.getElementById('submit').addEventListener('click', () => {
     // Display the output
     document.getElementById('output').innerHTML = JSON.stringify(outputs);
 });
+
+
+// Add event listener to the "Find Path" button
+document.getElementById('find-path').addEventListener('click', () => {
+    // Get the selected inputs
+    let input1 = document.getElementById('input-path1').value;
+    let input2 = document.getElementById('input-path2').value;
+
+    // Find the path between the two inputs
+    let path = findPath(input1, input2);
+
+    // Display the path
+
+    document.getElementById('output-path').innerHTML = "";
+    if(path == null) {
+        document.getElementById('output-path').innerHTML = "No path found";
+    } else {
+        for(let i = 0; i < path.length; i++) {
+            if(i % 2 == 0) {
+                document.getElementById('output-path').innerHTML += "<div class='path-element'>"+path[i] + "</div>";
+            } else {
+                document.getElementById('output-path').innerHTML += `<div data-op='${path[i]}'>${path[i]}</div>`//"<div class='operation-element'>" + path[i] + "<br>";
+            }
+        }
+    }
+    //document.getElementById('output-path').innerHTML = path ? path.join(' -> ') : 'No path found';
+});
+
+
+
+function findPath(start, end) {
+    // Queue for BFS, each element is a path
+    let queue = [[start]];
+    let visited = new Set();
+
+    while (queue.length > 0) {
+        let path = queue.shift();  // Get the first path in the queue
+        let node = path[path.length - 1];  // Get the last node in this path
+
+        if (!visited.has(node)) {
+            let neighbours = data[node];
+
+            if(neighbours == undefined) {
+                continue;
+            }
+
+            // Loop through all neighbouring nodes
+            for (let i = 0; i < neighbours.length; i++) {
+                let operation = neighbours[i].operation;
+                let outputs = neighbours[i].outputs;
+
+                // Loop through all outputs of this operation
+                for (let j = 0; j < outputs.length; j++) {
+                    let output = outputs[j].item;
+
+                    // Return the path if the output is the end item
+                    if (output.includes(end)) {
+                        console.log([...path, operation, output]);
+                        return [...path, operation, output];
+                    }
+
+                    // Add the new path to the queue
+                    queue.push([...path, operation, output]);
+                }
+            }
+
+            // Mark this node as visited
+            visited.add(node);
+        }
+    }
+
+    // No path found
+    return null;
+}
