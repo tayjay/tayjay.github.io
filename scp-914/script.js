@@ -16,6 +16,18 @@ for (let input in data) {
 
 // Add event listener to the "Submit" button
 document.getElementById('submit').addEventListener('click', () => {
+    updateSimulator();
+});
+
+document.getElementById('input').addEventListener('change', () => {
+    updateSimulator();
+});
+
+document.getElementById('operation').addEventListener('change', () => {
+    updateSimulator();
+});
+
+function updateSimulator() {
     // Get the selected input and operation
     let input = document.getElementById('input').value;
     let operation = document.getElementById('operation').value;
@@ -25,7 +37,8 @@ document.getElementById('submit').addEventListener('click', () => {
 
     // Display the output
     document.getElementById('output').innerHTML = JSON.stringify(outputs);
-});
+}
+
 
 
 // Add event listener to the "Find Path" button
