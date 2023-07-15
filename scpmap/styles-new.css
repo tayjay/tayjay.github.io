@@ -20,7 +20,7 @@ body {
     margin: auto;
   }
   
-
+  
 
 
 .map { margin:1em auto; border-collapse:collapse;table-layout: fixed; }
@@ -39,11 +39,13 @@ body {
 
 .grid { margin:1em auto; border-collapse:collapse;table-layout: fixed; }
 .grid td {
+  position: relative;
     cursor:pointer;
     width:72px; height:72px;
-    border:1px solid #ccc;
+    border:0px solid #ccc;
     text-align:center;
     font-family:sans-serif; font-size:13px;
+    background-color: rgba(116, 86, 251, 0.5);
     padding:0; margin:0;
     max-width: 72px;
     max-height: 72px;
@@ -61,11 +63,30 @@ body {
     background-color:green;
 }
 
+.grid td div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* This will center the text box */
+  color: #ffffff; /* Adjust to your preferred color */
+  font-size: 10px; /* Adjust to your preferred font size */
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6); /* Giving the text box a slightly transparent background for readability */
+  padding: 5px;
+  border-radius: 5px;
+}
+
 
 .grid td img {
-    display: block;
+  object-fit: cover;
     max-width: 100%;
     max-height: 100%;
+}
+
+.grid td.invisible {
+  background-color: rgb(50, 47, 62);
+  color: rgb(50, 47, 62);
+  border-color: rgb(50, 47, 62);
 }
 
 .level_selected {
@@ -162,4 +183,12 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  #tag-table td {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
   }
